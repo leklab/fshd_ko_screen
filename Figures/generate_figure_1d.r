@@ -26,7 +26,7 @@ p <- p + geom_rect(aes(xmin=2.0, xmax=Inf, ymin=2.0, ymax=Inf),fill=NA,color="bl
 p <- p + scale_colour_gradient(low="blue", high="red") + theme(legend.position="none") 
 
 
-p <- p + geom_label_repel(aes(label=ifelse(pos.p.value.x < 0.01 & pos.p.value.y < 0.01 ,as.character(id),'')), box.padding   = 0.35, point.padding = 0.5, segment.color = 'grey50')
+p <- p + geom_label_repel(aes(label=ifelse(pos.p.value.x < 0.01 & pos.p.value.y < 0.01 ,as.character(id),'')), size=5, box.padding   = 0.35, point.padding = 0.5, segment.color = 'grey50')
 
 
 png("Figure_1D.png",width=800,height=800,type="quartz",res=100)
